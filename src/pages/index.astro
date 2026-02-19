@@ -4,10 +4,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <BaseLayout
   title="Mamoru Shiba"
-  description="Mamoru Shibaの個人紹介ページ。"
+  description="現場を知る。コードで解決する。システムエンジニア / 介護福祉士 Mamoru Shibaの個人紹介ページ。"
 >
-  <main class="flex min-h-screen items-center justify-center px-6">
-    <div class="w-full max-w-md rounded-2xl border border-navy-700/50 bg-navy-900/60 p-10 text-center backdrop-blur-sm">
+  <main class="flex min-h-screen items-center justify-center px-6 py-12">
+    <div class="w-full max-w-lg rounded-2xl border border-navy-700/50 bg-navy-900/60 p-10 text-center backdrop-blur-sm">
       <!-- Avatar -->
       <img
         src="/images/profile.jpg"
@@ -15,14 +15,26 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         class="mx-auto h-24 w-24 rounded-full object-cover ring-4 ring-navy-600"
       />
 
-      <!-- Name -->
+      <!-- Name & Title -->
       <h1 class="mt-6 text-2xl font-bold text-white sm:text-3xl">Mamoru Shiba</h1>
-      <p class="mt-2 text-sm text-slate-400">Web Engineer</p>
+      <p class="mt-2 text-sm text-accent-400">システムエンジニア / 介護福祉士</p>
 
-      <!-- Bio -->
-      <p class="mt-6 text-sm leading-relaxed text-slate-300">
-        フロントエンドからバックエンドまで幅広い技術領域で開発を行っています。
+      <!-- Main Copy -->
+      <p class="mt-4 text-base font-semibold text-slate-200">
+        現場を知る。コードで解決する。
       </p>
+
+      <!-- Highlights -->
+      <div class="mt-8 space-y-3 text-left">
+        <div class="rounded-lg border border-navy-700/50 bg-navy-800/40 px-4 py-3">
+          <p class="text-xs font-medium text-accent-400">医療・福祉SaaS</p>
+          <p class="mt-1 text-sm text-slate-300">AIによる認知機能予測サービスの開発</p>
+        </div>
+        <div class="rounded-lg border border-navy-700/50 bg-navy-800/40 px-4 py-3">
+          <p class="text-xs font-medium text-accent-400">企業向けSaaS</p>
+          <p class="mt-1 text-sm text-slate-300">IPOを見据えた堅牢なバックエンド構築</p>
+        </div>
+      </div>
 
       <!-- Links -->
       <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
@@ -47,6 +59,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           GitHub
         </a>
       </div>
+
+      <!-- Invoice -->
+      <p class="mt-8 text-xs text-slate-500">
+        インボイス登録番号：T9810378253047
+      </p>
     </div>
   </main>
 </BaseLayout>

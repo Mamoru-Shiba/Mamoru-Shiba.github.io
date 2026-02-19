@@ -1,0 +1,24 @@
+---
+import { getCollection } from "astro:content";
+import ServiceCard from "../ui/ServiceCard.astro";
+
+const services = await getCollection("services");
+---
+
+<section id="services" class="px-6 py-10">
+  <div class="mx-auto max-w-5xl">
+    <h2 class="text-center text-2xl font-bold text-white sm:text-3xl">Services</h2>
+    <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        services.map((service) => (
+          <ServiceCard
+            title={service.data.title}
+            description={service.data.description}
+            url={service.data.url}
+            icon={service.data.icon}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>

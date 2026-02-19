@@ -1,0 +1,23 @@
+[
+  {
+    "id": "web-development",
+    "title": "Web開発",
+    "description": "モダンな技術スタックを活用した、高速でアクセシブルなWebサイト・Webアプリケーションの設計・開発を行います。",
+    "url": "https://example.com/web-development",
+    "icon": "💻"
+  },
+  {
+    "id": "consulting",
+    "title": "技術コンサルティング",
+    "description": "技術選定、アーキテクチャ設計、開発プロセス改善など、プロジェクトの課題解決をサポートします。",
+    "url": "https://example.com/consulting",
+    "icon": "🎯"
+  },
+  {
+    "id": "code-review",
+    "title": "コードレビュー",
+    "description": "既存コードベースの品質向上、パフォーマンス最適化、セキュリティ改善のためのレビューを提供します。",
+    "url": "https://example.com/code-review",
+    "icon": "🔍"
+  }
+]

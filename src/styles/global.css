@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors - Dark Navy + Blue Accent */
+  --color-navy-950: #0a0e1a;
+  --color-navy-900: #0f1629;
+  --color-navy-800: #1a2342;
+  --color-navy-700: #253259;
+  --color-navy-600: #324170;
+
+  --color-accent-500: #3b82f6;
+  --color-accent-400: #60a5fa;
+  --color-accent-300: #93c5fd;
+
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+}

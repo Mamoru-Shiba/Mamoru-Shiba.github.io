@@ -1,12 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import LogoLanding from "../components/sections/LogoLanding.astro";
 ---
 
 <BaseLayout
   title="Mamoru Shiba"
   description="現場を知る。コードで解決する。システムエンジニア / 介護福祉士 Mamoru Shibaの個人紹介ページ。"
 >
-  <main class="flex min-h-screen items-center justify-center px-6 py-12">
+  <LogoLanding />
+  <section id="profile" class="snap-section flex items-center justify-center bg-navy-950 text-slate-200 px-6 py-12">
     <div class="w-full max-w-lg rounded-2xl border border-navy-700/50 bg-navy-900/60 p-10 text-center backdrop-blur-sm">
       <!-- Avatar -->
       <img
@@ -65,5 +67,5 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         インボイス登録番号：T9810378253047
       </p>
     </div>
-  </main>
+  </section>
 </BaseLayout>

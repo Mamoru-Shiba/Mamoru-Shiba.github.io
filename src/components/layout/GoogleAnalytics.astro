@@ -1,0 +1,27 @@
+---
+// Google アナリティクス（GA4）の測定タグ。
+// 公開用のビルド（npm run build）のときだけ出力し、手元の npm run dev では記録しない。
+// 測定 ID は公開される前提の番号なので、コードに直接書いてよい。
+const GA_MEASUREMENT_ID = "G-RKZ9JHP9F8";
+const isProduction = import.meta.env.PROD;
+---
+
+{
+  isProduction && (
+    <>
+      <script
+        is:inline
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+      />
+      <script is:inline define:vars={{ GA_MEASUREMENT_ID }}>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", GA_MEASUREMENT_ID);
+      </script>
+    </>
+  )
+}

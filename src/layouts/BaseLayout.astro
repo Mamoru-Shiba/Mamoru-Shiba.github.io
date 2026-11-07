@@ -1,4 +1,6 @@
 ---
+import GoogleAnalytics from "../components/layout/GoogleAnalytics.astro";
+
 interface Props {
   title: string;
   description: string;
@@ -34,6 +36,8 @@ const ogImage = new URL("/images/og-image.png", Astro.site).href;
 
     <link rel="icon" type="image/jpeg" href="/favicon.jpg" />
     <title>{title}</title>
+
+    <GoogleAnalytics />
   </head>
   <body
     class="snap-container font-[Inter,'Noto_Sans_JP',sans-serif]"

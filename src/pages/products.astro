@@ -2,14 +2,18 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 // 中身が決まったら、各項目の下に本文を書き足す
+const products = [
+  { name: "3Dプリントの靴", summary: "3Dプリンターで作る靴", items: ["サイズの測り方"] },
+  { name: "kokooite", summary: "ドアの前に置く置き配マット", items: [] },
+  { name: "koke-note", summary: "小さな紙をまとめるメモ帳カバー", items: [] },
+];
+
 const sections = [
-  { heading: "作品", items: [] },
   { heading: "値段", items: ["値段の目安", "送料", "お見積もりについて"] },
   {
     heading: "ご注文の流れ",
     items: ["お問い合わせ", "サイズの確認", "お見積もり", "お支払い", "製作", "発送"],
   },
-  { heading: "サイズの測り方", items: [] },
   { heading: "お支払い", items: ["お支払い方法", "お支払いの時期"] },
   {
     heading: "返品について",
@@ -21,15 +25,34 @@ const sections = [
 ---
 
 <BaseLayout
-  title="3Dプリント製品 | Studio Shiba"
-  description="Studio Shiba の3Dプリント製品。受注生産で製作しています。"
+  title="プロダクト | Studio Shiba"
+  description="Studio Shiba のプロダクト。すべて受注生産で製作しています。"
 >
   <main class="min-h-dvh bg-navy-950 px-6 py-16 text-slate-200">
     <div class="mx-auto max-w-2xl">
-      <h1 class="text-2xl font-bold text-white sm:text-3xl">3Dプリント製品</h1>
-      <p class="mt-3 text-sm text-slate-300">受注生産で製作しています。</p>
+      <h1 class="text-2xl font-bold text-white sm:text-3xl">プロダクト</h1>
+      <p class="mt-3 text-sm text-slate-300">すべて受注生産で製作しています。</p>
 
-      <div class="mt-10 space-y-8">
+      <div class="mt-10 space-y-4">
+        {
+          products.map(({ name, summary, items }) => (
+            <section class="rounded-lg border border-navy-700/50 bg-navy-900 p-5">
+              <h2 class="text-lg font-semibold text-white">{name}</h2>
+              <p class="mt-1 text-sm text-slate-300">{summary}</p>
+              {items.length > 0 && (
+                <ul class="mt-2 space-y-1 text-sm text-slate-300">
+                  {items.map((item) => (
+                    <li>・{item}</li>
+                  ))}
+                </ul>
+              )}
+              <p class="mt-2 text-sm text-slate-400">準備中</p>
+            </section>
+          ))
+        }
+      </div>
+
+      <div class="mt-12 space-y-8">
         {
           sections.map(({ heading, items }) => (
             <section>

@@ -19,7 +19,7 @@
 
   /* Colors - プロダクトのページ（/products・/legal）
      役割ごとの変数。ページでは色コードを直接書かず、この名前を使う */
-  --color-product-bg: #fbf9f5; /* Bg Primary：和紙・白土。ページ全体の背景 */
+  --color-product-bg: #fdfcfa; /* Bg Primary：白（わずかに温かい）。ページ全体の背景 */
   --color-product-bg-sub: #f2ece1; /* Bg Secondary：砂利・木肌。カード・セクションの背景 */
   --color-product-text: #1f2421; /* Text Primary：墨・黒墨。本文・見出し */
   --color-product-text-sub: #525854; /* Text Secondary：煙・薄墨。補足・日時 */

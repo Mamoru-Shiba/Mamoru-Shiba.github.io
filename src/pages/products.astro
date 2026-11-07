@@ -1,0 +1,44 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const sections = [
+  "作品",
+  "値段",
+  "ご注文の流れ",
+  "お支払い",
+  "返品について",
+  "届くまでの目安",
+];
+---
+
+<BaseLayout
+  title="3Dプリント製品 | Studio Shiba"
+  description="Studio Shiba の3Dプリント製品。受注生産で製作しています。"
+>
+  <main class="min-h-dvh bg-navy-950 px-6 py-16 text-slate-200">
+    <div class="mx-auto max-w-2xl">
+      <h1 class="text-2xl font-bold text-white sm:text-3xl">3Dプリント製品</h1>
+      <p class="mt-3 text-sm text-slate-300">受注生産で製作しています。</p>
+
+      <div class="mt-10 space-y-8">
+        {
+          sections.map((heading) => (
+            <section>
+              <h2 class="border-l-2 border-accent-500 pl-3 text-lg font-semibold text-white">
+                {heading}
+              </h2>
+              <p class="mt-2 pl-3 text-sm text-slate-400">準備中</p>
+            </section>
+          ))
+        }
+      </div>
+
+      <a
+        href="/"
+        class="mt-12 inline-flex items-center rounded-lg border border-navy-700/50 px-4 py-2 text-sm text-slate-300 transition-colors hover:border-accent-500/50 hover:text-accent-400"
+      >
+        トップへ戻る
+      </a>
+    </div>
+  </main>
+</BaseLayout>

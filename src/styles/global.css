@@ -24,6 +24,7 @@
   --color-product-text: #1f2421; /* Text Primary：墨・黒墨。本文・見出し */
   --color-product-text-sub: #525854; /* Text Secondary：煙・薄墨。補足・日時 */
   --color-product-line: #e2dacc; /* Border / Line：和紙の繊維・石の目。区切り線・枠線 */
+  --color-product-accent: #4f6b3a; /* Accent：山苔。見出しの線・リンク・目立たせるボタン */
 }
 
 .snap-container {

@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+// 中身が決まったら、"準備中" を本文に置き換える
+const items = [
+  "販売業者",
+  "運営責任者",
+  "所在地",
+  "電話番号",
+  "メールアドレス",
+  "販売価格",
+  "商品代金以外の必要料金",
+  "お支払い方法",
+  "お支払いの時期",
+  "商品の引渡し時期",
+  "返品・交換について",
+];
+---
+
+<BaseLayout
+  title="特定商取引法に基づく表記 | Studio Shiba"
+  description="Studio Shiba の特定商取引法に基づく表記。"
+>
+  <main class="min-h-dvh bg-navy-950 px-6 py-16 text-slate-200">
+    <div class="mx-auto max-w-2xl">
+      <h1 class="text-xl font-bold text-white sm:text-2xl">特定商取引法に基づく表記</h1>
+
+      <dl class="mt-8 divide-y divide-navy-700/50 border-y border-navy-700/50">
+        {
+          items.map((label) => (
+            <div class="grid gap-1 py-4 sm:grid-cols-3 sm:gap-4">
+              <dt class="text-sm font-semibold text-white">{label}</dt>
+              <dd class="text-sm text-slate-400 sm:col-span-2">準備中</dd>
+            </div>
+          ))
+        }
+      </dl>
+
+      <a
+        href="/products"
+        class="mt-12 inline-flex items-center rounded-lg border border-navy-700/50 px-4 py-2 text-sm text-slate-300 transition-colors hover:border-accent-500/50 hover:text-accent-400"
+      >
+        3Dプリント製品へ戻る
+      </a>
+    </div>
+  </main>
+</BaseLayout>

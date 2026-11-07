@@ -1,13 +1,22 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
+// 中身が決まったら、各項目の下に本文を書き足す
 const sections = [
-  "作品",
-  "値段",
-  "ご注文の流れ",
-  "お支払い",
-  "返品について",
-  "届くまでの目安",
+  { heading: "作品", items: [] },
+  { heading: "値段", items: ["値段の目安", "送料", "お見積もりについて"] },
+  {
+    heading: "ご注文の流れ",
+    items: ["お問い合わせ", "サイズの確認", "お見積もり", "お支払い", "製作", "発送"],
+  },
+  { heading: "サイズの測り方", items: [] },
+  { heading: "お支払い", items: ["お支払い方法", "お支払いの時期"] },
+  {
+    heading: "返品について",
+    items: ["お客様のご都合による返品", "不良品の場合", "色や質感の個体差"],
+  },
+  { heading: "届くまでの目安", items: ["製作にかかる期間", "発送方法"] },
+  { heading: "お問い合わせ", items: [] },
 ];
 ---
 
@@ -22,23 +31,35 @@ const sections = [
 
       <div class="mt-10 space-y-8">
         {
-          sections.map((heading) => (
+          sections.map(({ heading, items }) => (
             <section>
               <h2 class="border-l-2 border-accent-500 pl-3 text-lg font-semibold text-white">
                 {heading}
               </h2>
+              {items.length > 0 && (
+                <ul class="mt-2 space-y-1 pl-3 text-sm text-slate-300">
+                  {items.map((item) => (
+                    <li>・{item}</li>
+                  ))}
+                </ul>
+              )}
               <p class="mt-2 pl-3 text-sm text-slate-400">準備中</p>
             </section>
           ))
         }
       </div>
 
-      <a
-        href="/"
-        class="mt-12 inline-flex items-center rounded-lg border border-navy-700/50 px-4 py-2 text-sm text-slate-300 transition-colors hover:border-accent-500/50 hover:text-accent-400"
-      >
-        トップへ戻る
-      </a>
+      <div class="mt-12 flex flex-wrap items-center gap-4">
+        <a
+          href="/"
+          class="inline-flex items-center rounded-lg border border-navy-700/50 px-4 py-2 text-sm text-slate-300 transition-colors hover:border-accent-500/50 hover:text-accent-400"
+        >
+          トップへ戻る
+        </a>
+        <a href="/legal" class="text-xs text-slate-400 underline hover:text-accent-400">
+          特定商取引法に基づく表記
+        </a>
+      </div>
     </div>
   </main>
 </BaseLayout>

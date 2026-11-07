@@ -48,6 +48,7 @@ const isIndexed = isIndexedPath(Astro.url.pathname);
     <title>{title}</title>
 
     <GoogleAnalytics />
+    <slot name="head" />
   </head>
   <body
     class="snap-container font-[Inter,'Noto_Sans_JP',sans-serif]"

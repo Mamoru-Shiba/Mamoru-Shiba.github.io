@@ -28,25 +28,25 @@ const sections = [
   title="プロダクト | Studio Shiba"
   description="Studio Shiba のプロダクト。すべて受注生産で製作しています。"
 >
-  <main class="min-h-dvh bg-navy-950 px-6 py-16 text-slate-200">
+  <main class="min-h-dvh bg-product-bg px-6 py-16 text-product-text">
     <div class="mx-auto max-w-2xl">
-      <h1 class="text-2xl font-bold text-white sm:text-3xl">プロダクト</h1>
-      <p class="mt-3 text-sm text-slate-300">すべて受注生産で製作しています。</p>
+      <h1 class="text-2xl font-bold text-product-text sm:text-3xl">プロダクト</h1>
+      <p class="mt-3 text-sm text-product-text-sub">すべて受注生産で製作しています。</p>
 
       <div class="mt-10 space-y-4">
         {
           products.map(({ name, summary, items }) => (
-            <section class="rounded-lg border border-navy-700/50 bg-navy-900 p-5">
-              <h2 class="text-lg font-semibold text-white">{name}</h2>
-              <p class="mt-1 text-sm text-slate-300">{summary}</p>
+            <section class="rounded-lg border border-product-line bg-product-bg-sub p-5">
+              <h2 class="text-lg font-semibold text-product-text">{name}</h2>
+              <p class="mt-1 text-sm text-product-text">{summary}</p>
               {items.length > 0 && (
-                <ul class="mt-2 space-y-1 text-sm text-slate-300">
+                <ul class="mt-2 space-y-1 text-sm text-product-text">
                   {items.map((item) => (
                     <li>・{item}</li>
                   ))}
                 </ul>
               )}
-              <p class="mt-2 text-sm text-slate-400">準備中</p>
+              <p class="mt-2 text-sm text-product-text-sub">準備中</p>
             </section>
           ))
         }
@@ -56,17 +56,17 @@ const sections = [
         {
           sections.map(({ heading, items }) => (
             <section>
-              <h2 class="border-l-2 border-accent-500 pl-3 text-lg font-semibold text-white">
+              <h2 class="border-l-2 border-product-text pl-3 text-lg font-semibold text-product-text">
                 {heading}
               </h2>
               {items.length > 0 && (
-                <ul class="mt-2 space-y-1 pl-3 text-sm text-slate-300">
+                <ul class="mt-2 space-y-1 pl-3 text-sm text-product-text">
                   {items.map((item) => (
                     <li>・{item}</li>
                   ))}
                 </ul>
               )}
-              <p class="mt-2 pl-3 text-sm text-slate-400">準備中</p>
+              <p class="mt-2 pl-3 text-sm text-product-text-sub">準備中</p>
             </section>
           ))
         }
@@ -75,11 +75,11 @@ const sections = [
       <div class="mt-12 flex flex-wrap items-center gap-4">
         <a
           href="/"
-          class="inline-flex items-center rounded-lg border border-navy-700/50 px-4 py-2 text-sm text-slate-300 transition-colors hover:border-accent-500/50 hover:text-accent-400"
+          class="inline-flex items-center rounded-lg border border-product-line px-4 py-2 text-sm text-product-text transition-colors hover:bg-product-bg-sub"
         >
           トップへ戻る
         </a>
-        <a href="/legal" class="text-xs text-slate-400 underline hover:text-accent-400">
+        <a href="/legal" class="text-xs text-product-text-sub underline hover:text-product-text">
           特定商取引法に基づく表記
         </a>
       </div>
